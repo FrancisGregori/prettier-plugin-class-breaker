@@ -1,0 +1,53 @@
+{
+  "name": "prettier-plugin-class-breaker",
+  "version": "1.0.0",
+  "description": "A Prettier plugin for JSX that formats long CSS class strings into multiple lines. It optimizes class name readability in JSX, supporting TypeScript and standard syntax.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancisGregori/prettier-plugin-class-breaker.git"
+  },
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "jsx",
+    "css-classes",
+    "formatting",
+    "typescript",
+    "react",
+    "code-style",
+    "code-readability",
+    "linting"
+  ],
+  "author": "Francis Gregori",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrancisGregori/prettier-plugin-class-breaker/issues"
+  },
+  "homepage": "https://github.com/FrancisGregori/prettier-plugin-class-breaker#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/generator": "^7.23.4",
+    "@babel/parser": "^7.23.4",
+    "@babel/traverse": "^7.23.4",
+    "@babel/types": "^7.23.4",
+    "@types/babel__generator": "^7.6.7",
+    "@types/babel__traverse": "^7.20.4",
+    "@types/node": "^20.9.3",
+    "@types/prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "strip-indent": "^4.0.0",
+    "typescript": "^4.0.0"
+  }
+}
