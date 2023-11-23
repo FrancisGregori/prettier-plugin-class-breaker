@@ -23,6 +23,28 @@ or
 yarn add -D prettier-class-breaker-plugin
 ```
 
+## Adding the Plugin to Prettier Configuration
+
+After installing the Prettier Class Breaker Plugin, you need to add it to your Prettier configuration. This step ensures that Prettier uses the plugin when formatting your code. Here's how you can do it:
+
+1. Open your Prettier configuration file (`.prettierrc`, `.prettierrc.js`, or `prettier.config.js`).
+
+2. Add the plugin to the `plugins` array in the configuration. It's important to add this plugin as the last one in the list to ensure it works correctly with other plugins.
+
+Example using `.prettierrc.js`:
+
+```javascript
+module.exports = {
+  // ... your other Prettier configuration options ...
+  plugins: [
+    // ... other plugins ...
+    'prettier-class-breaker-plugin'
+  ],
+};
+```
+
+> Note: Make sure to list the prettier-class-breaker-plugin as the last plugin in the plugins array. This order is crucial for the plugin to function properly.
+
 ## Configuration
 
 To configure the plugin, create a `.classbreakerrs` file in your project root. Below are the available configuration options:

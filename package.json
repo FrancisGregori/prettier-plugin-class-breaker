@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-class-breaker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Prettier plugin for JSX that formats long CSS class strings into multiple lines. It optimizes class name readability in JSX, supporting TypeScript and standard syntax.",
   "main": "dist/index.js",
   "scripts": {
