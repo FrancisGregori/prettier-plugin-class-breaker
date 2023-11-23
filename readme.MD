@@ -43,7 +43,7 @@ Here's an example of the `.classbreakerrs` file:
   "indentStyle": "space",
   "indentSize": 2
 }
-
+```
 
 - `classesPerLine`: Number of classes per line before breaking.
 - `lineBreakAfterClasses`: Number of classes after which a line break is inserted.
