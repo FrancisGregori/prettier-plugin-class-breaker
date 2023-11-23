@@ -27,7 +27,7 @@ export function breakClassName(
     }
   }
 
-  brokenClasses += '\n' + baseIndentation + extraSpace
+  brokenClasses += '\n' + baseIndentation + indentCharacter.repeat(indentSize / 2)
 
   const templateElement = t.templateElement({ raw: brokenClasses, cooked: brokenClasses }, true)
   const templateLiteral = t.templateLiteral([templateElement], [])
