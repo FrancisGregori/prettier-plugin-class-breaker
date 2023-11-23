@@ -31,6 +31,7 @@ export const classBreakerPreprocess = async (parser: Parser): Promise<Parser> =>
         JSXAttribute(path) {
           if (path.node.name.name === 'className') {
             let classValue
+            let isTemplateLiteral = false
 
             if (path.node.value?.type === 'StringLiteral') {
               classValue = path.node.value.value
@@ -38,6 +39,7 @@ export const classBreakerPreprocess = async (parser: Parser): Promise<Parser> =>
               path.node.value?.type === 'JSXExpressionContainer' &&
               path.node.value.expression.type === 'TemplateLiteral'
             ) {
+              isTemplateLiteral = true
               classValue = path.node.value.expression.quasis
                 .map((quasi) => quasi.value.raw)
                 .join('')
@@ -57,6 +59,10 @@ export const classBreakerPreprocess = async (parser: Parser): Promise<Parser> =>
                   path.node.value = t.jsxExpressionContainer(result.expression)
                   modified = true
                 }
+              } else if (isTemplateLiteral && classes.length <= lineBreakAfterClasses) {
+                // Convert back to StringLiteral
+                path.node.value = t.stringLiteral(classValue)
+                modified = true
               }
             }
           }
